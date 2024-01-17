@@ -2,40 +2,33 @@
 
 This API allows you to manage vouchers, including retrieving all vouchers, getting details of a specific voucher, and creating new vouchers.
 
-## 1. Get All Vouchers
+**How to get started**
+**create a virtual enviroment**
+```
+git clone https://github.com/your-username/your-flask-app.git
+cd your-flask-app
+python -m venv venv
+source venv/bin/activate
+# On Windows, use
+`venv\Scripts\activate`
+pip install -r requirements.txt
+python app.py
+```
+**Endpoints**: 
+- **GET /vouchers**
+  - *Description*: Retrieve all vouchers.
 
-**Endpoint**: `GET /vouchers`
+- **GET /vouchers/<string:voucher_code>**
+  - *Description*: Retrieve details of a specific voucher by its code.
 
-**Description**: Retrieve all vouchers.
+- **POST /vouchers**
+  - *Description*: Get all redeems.
 
-**Response**: JSON response containing a list of voucher objects.
+- **GET /redeems**
+  - *Description*: Redeem a single voucher.
 
-## 2. Get Voucher by Code
+- **GET /redeem**
+  - *Description*: Redeem Multiple Vouchers.
 
-**Endpoint**: `GET /vouchers/<string:voucher_code>`
-
-**Description**: Retrieve details of a specific voucher by its code.
-
-**Parameters**:
-- `voucher_code` (string, required): The unique code of the voucher.
-
-**Response**: JSON response containing voucher details or an error message.
-
-## 3. Create Voucher
-
-**Endpoint**: `POST /vouchers`
-
-**Description**: Create a new voucher.
-
-**Request Body**:
-```json
-{
-  "code": "V0001",
-  "type": "gift voucher",
-  "value": 100.0,
-  "discount": 0,
-  "expiration_date": "2024-10-30",
-  "redemption_limit": 50,
-  "user_restrictions": "user_1,user_2",
-  "products": "product_a,product_b"
-}
+- **POST /redeem-multiple**
+  - *Description*: Redeem multiple vouchers.
