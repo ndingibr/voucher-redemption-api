@@ -6,8 +6,8 @@ This API allows you to manage vouchers, including retrieving all vouchers, getti
 **create a virtual enviroment**
 ```
 ----
-git clone https://github.com/your-username/your-flask-app.git
-cd your-flask-app
+git clone https://github.com/ndingibr/voucher-redemption-api.git
+cd app
 python -m venv venv
 source venv/bin/activate
 ----
