@@ -39,4 +39,3 @@ This API allows you to manage vouchers, including retrieving all vouchers, getti
   "user_restrictions": "user_1,user_2",
   "products": "product_a,product_b"
 }
-
