@@ -16,6 +16,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 python app.py
 ```
+**NB: don't use docker-compose, it has a bug in connecting to the database that I didn't have enough time to troubleshoot**
 **Endpoints**: 
 - **GET /vouchers**
   - Retrieve all vouchers.
